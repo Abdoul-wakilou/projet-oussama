@@ -34,6 +34,12 @@ Ce projet est un chatbot interactif développé pour le site web de Pixelraise. 
 
 ### Avoir le projet sur votre ordinateur
 
+- cloner le projet pour l'avoir sur votre ordinateur en tapant cette commande
+
+```bash
+git clone https://github.com/Abdoul-wakilou/projet-oussama.git
+
+```
 - nom du projet : projet-oussama
 
 ## Configuration de la base de données mongodb

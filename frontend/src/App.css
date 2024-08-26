@@ -1,0 +1,68 @@
+/* App.css */
+.App {
+  text-align: center;
+  padding: 0;
+  background-color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden; /* Empêche le défilement */
+  background: #574d64;
+}
+
+.App-header {
+  background-image: linear-gradient(101deg, #f7618b, #2a7aff);
+  color: white;
+  padding: 20px; /* Augmenter le padding pour plus d'espace */
+  border-radius: 10px;
+  margin-top: 20px; /* Marge en haut de la barre */
+  margin-bottom: 20px; /* Espacement entre le header et le chatbot */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 800px; /* Largeur maximale pour éviter l'élargissement excessif */
+  display: flex;
+  align-items: center; /* Aligne verticalement le texte et l'image */
+  justify-content: center; /* Centre horizontalement le contenu */
+}
+
+.App-logo {
+  width: 100px; /* Augmenter la taille de l'image */
+  height: auto;
+  margin-right: 15px; /* Espacement entre l'image et le titre */
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 1.5rem; /* Ajuster la taille du texte */
+}
+
+/* Styles pour les écrans mobiles */
+@media (max-width: 600px) {
+  .App-header {
+    width: 100%;
+    flex-direction: column; /* Empile l'image et le titre verticalement sur les petits écrans */
+    align-items: center; /* Centre le contenu */
+    padding: 15px; /* Ajuster le padding pour les petits écrans */
+  }
+
+  .App-logo {
+    width: 80px; /* Réduire la taille de l'image sur mobile */
+    margin-right: 0; /* Enlever l'espacement sur mobile */
+    margin-bottom: 10px; /* Espacement entre l'image et le titre */
+  }
+
+  .App-header h1 {
+    font-size: 1.2rem; /* Réduire la taille du texte sur mobile */
+  }
+}
+
+main {
+  flex: 1; /* Permet au main de prendre tout l'espace restant */
+  display: flex;
+  justify-content: center; /* Centre le chatbot */
+  align-items: center; /* Centre verticalement le chatbot */
+  width: 100%;
+}

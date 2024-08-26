@@ -1,0 +1,296 @@
+[
+    {
+        "id": "besoin_initial",
+        "parent": null,
+        "content": "Salut 👋, Quel service recherchez-vous ?",
+        "description": ""
+    },
+    {
+        "id": "service_web",
+        "parent": "besoin_initial",
+        "content": "Développement Web",
+        "description": "Nous offrons une variété de services en développement web qui répondent à vos besoins. Que cherchez-vous spécifiquement ?"
+    },
+    {
+        "id": "it_consulting",
+        "parent": "besoin_initial",
+        "content": "IT Consulting",
+        "description": "Nous offrons un accompagnement tout au long du projet digital : conseil, assistance, suivi.. Que cherchez-vous spécifiquement ?"
+    },
+    {
+        "id": "application_mobile",
+        "parent": "besoin_initial",
+        "content": "Applications Mobile",
+        "description": "Nous offrons diverses solutions en développement mobile. Que cherchez-vous spécifiquement ?"
+    },
+    {
+        "id": "solutions_desktop",
+        "parent": "besoin_initial",
+        "content": "Solutions Desktop",
+        "description": "Nous offrons diverses solutions en développement de logiciels. Que cherchez-vous spécifiquement ?"
+    },
+    {
+        "id": "marketing_digital",
+        "parent": "besoin_initial",
+        "content": "Marketing Digital",
+        "description": "Notre équipe d'experts SEO sera ravie de vous aider. Quel type de Marketing Digital recherchez-vous ?"
+    },
+    {
+        "id": "design_ux_ui",
+        "parent": "besoin_initial",
+        "content": "Design UX/UI",
+        "description": "Le UX/UI design est la base de toute conception réussie et efficace. Nos designers qualifiés seront ravis de vous aider. Quel type de Design UX/UI souhaitez-vous ?"
+    },
+    {
+        "id": "a_propos_pixelraise",
+        "parent": "besoin_initial",
+        "content": "À propos de Pixelraise",
+        "description": "Pixelraise est un groupe basé en Haute-Savoie, France, spécialisé dans la transformation digitale. Fondé par trois entités internationales, il regroupe : Webgoeson (Suisse), eNano-Tech (Tunisie) et Servicize (Canada). Voulez-vous nous contacter ?"
+    },
+    {
+        "id": "autre_besoin",
+        "parent": "besoin_initial",
+        "content": "Autre",
+        "description": "Que voulez-vous exactement ?"
+    },
+    { 
+        "id": "web_vitrine",
+        "parent": "service_web",
+        "content": "Site Vitrine",
+        "description": "Nous pouvons créer un site vitrine pour mettre en valeur votre entreprise. Vous avez des préférences pour la technologie utilisée ?"
+    },
+    {
+        "id": "web_ecommerce",
+        "parent": "service_web",
+        "content": "Site E-commerce",
+        "description": "Vous voulez un site E-commerce ? Quelle plateforme préférez-vous utiliser (WooCommerce, Shopify, Wix etc.) ?"
+    },
+    {
+        "id": "web_application_sur_mesure",
+        "parent": "service_web",
+        "content": "Application Web sur Mesure",
+        "description": "Pour un projet spécifique, nous pouvons développer une application web sur mesure. Avez-vous des fonctionnalités particulières en tête ?"
+    },
+    {
+        "id": "technologie_site_vitrine",
+        "parent": "web_vitrine",
+        "content": "Technologie pour Site Vitrine",
+        "description": "Nous serons ravis de développer votre présence en ligne avec un site vitrine. Préférez-vous utiliser quel CMS, un développement sur mesure ou un autre framework ?"
+    },
+    {
+        "id": "budget_site_vitrine",
+        "parent": "technologie_site_vitrine",
+        "content": "Budget pour Site Vitrine",
+        "description": "Les dévis pour nos services varient en fonction de vos besoins comme les technologies à utiliser et du nombre de pages et de fonctionnalités à mettre en place. Contactez nous pour mieux en discuter sur votre projet. Voulez-vous nous contacter ?"
+    },
+    {
+        "id": "fonctionnalites_ecommerce",
+        "parent": "web_ecommerce",
+        "content": "Fonctionnalités pour E-commerce",
+        "description": "Nous serons ravis de développer votre boutique en ligne. Quelles fonctionnalités sont essentielles pour votre site e-commerce ?"
+    },
+    {
+        "id": "ecommerce_plateforme",
+        "parent": "web_ecommerce",
+        "content": "Plateformes pour Site E-commerce",
+        "description": "Nous serons ravis de développer votre boutique en ligne. Quelle plateforme e-commerce souhaitez-vous utiliser ?"
+    },
+    {
+        "id": "budget_site_ecommerce",
+        "parent": "web_ecommerce",
+        "content": "Budget pour Site e-commerce",
+        "description": "Les dévis pour nos services varient en fonction de vos besoins comme les technologies à utiliser et du nombre de pages et de fonctionnalités à mettre en place. Contactez nous pour mieux en discuter sur votre projet. Voulez-vous nous contacter ?"
+    },
+    {
+        "id": "fonctionnalites_application_sur_mesure",
+        "parent": "web_application_sur_mesure",
+        "content": "Fonctionnalités pour Application sur Mesure",
+        "description": "Nous serons ravis de développer votre application web personnalisée. Notre équipe de développeurs en multitude de langages modernes et puissant comme React, Angular, Node.js, php etc. Pouvez-vous décrire les fonctionnalités clés que vous souhaitez inclure dans votre application ?"
+    },
+    {
+        "id": "budget_application_sur_mesure",
+        "parent": "web_application_sur_mesure",
+        "content": "Budget pour Application sur Mesure",
+        "description": "Les dévis pour nos services varient en fonction de vos besoins comme les technologies à utiliser et du nombre de pages et de fonctionnalités à mettre en place. Contactez nous pour mieux en discuter sur votre projet. Voulez-vous nous contacter ?"
+    },
+    {
+        "id": "informations_a_propos_pixelraise",
+        "parent": "a_propos_pixelraise",
+        "content": "Informations sur Pixelraise",
+        "description": "Pixelraise est un groupe basé en Haute-Savoie, France, spécialisé dans la transformation digitale. Fondé par trois entités internationales, il regroupe : Webgoeson(Suisse): gestion commerciale, gestion de projet et consulting. eNano - Tech(Tunisie) : développement web et mobile, consulting IT. Servicize(Canada) : consulting IT et expertise en e- learning. Le groupe allie ces expertises pour accompagner ses clients dans leur succès digital. Voulez - vous nous contacter ?"
+    },
+    {
+        "id": "oui_informations_a_propos_pixelraise",
+        "parent": "informations_a_propos_pixelraise",
+        "content": "Oui",
+        "description": ""
+    },
+    {
+        "id": "non_informations_a_propos_pixelraise",
+        "parent": "informations_a_propos_pixelraise",
+        "content": "Non",
+        "description": ""
+    },
+    {
+        "id": "moyen_de_contact_informations_a_propos_pixelraise",
+        "parent": "oui_informations_a_propos_pixelraise",
+        "content": "Super ! Comment voulez-vous contacter Pixelraise ?",
+        "description": ""
+    },
+    {
+        "id": "email_de_contact_informations_a_propos_pixelraise",
+        "parent": "moyen_de_contact_informations_a_propos_pixelraise",
+        "content": "D'accord, Nous sommes toujours heureux de nouer des contacts précieux. Vous pouvez nous laisser un message sur notre boite email: .",
+        "description": "Vous êtes satisfait ?"
+    },
+    {
+        "id": "telephone_de_contact_informations_a_propos_pixelraise",
+        "parent": "moyen_de_contact_informations_a_propos_pixelraise",
+        "content": "D'accord, Nous sommes toujours heureux de nouer des contacts précieux. Vous pouvez nous appeler directement sur: +33 663 721 725 .",
+        "description": "Vous êtes satisfait ?"
+    },
+    {
+        "id": "adresse_physique_de_contact_informations_a_propos_pixelraise",
+        "parent": "moyen_de_contact_informations_a_propos_pixelraise",
+        "content": "D'accord, Nous sommes toujours heureux de nouer des contacts précieux. Nous sommes situé à 15 Avenue Émile Zola, 74100 Annemasse, France.",
+        "description": "Vous êtes satisfait ?"
+    },
+    {
+        "id": "service_maintenance",
+        "parent": "service_web",
+        "content": "Maintenance et Support",
+        "description": "Souhaitez-vous un service de maintenance continue pour votre site ou application ?"
+    },
+    {
+        "id": "details_maintenance",
+        "parent": "service_maintenance",
+        "content": "Détails du Service de Maintenance",
+        "description": "Quel type de maintenance recherchez-vous ? (Mises à jour régulières, support technique, etc.)"
+    },
+    {
+        "id": "budget_maintenance",
+        "parent": "details_maintenance",
+        "content": "Budget pour la Maintenance",
+        "description": "Quel budget souhaitez-vous allouer pour ce service de maintenance ?"
+    },
+    {
+        "id": "type_seo",
+        "parent": "marketing_digital",
+        "content": "Type de SEO",
+        "description": "Quel aspect du SEO souhaitez-vous améliorer ? (Optimisation On-page, création de contenu, backlinking, etc.)"
+    },
+    {
+        "id": "budget_seo",
+        "parent": "type_seo",
+        "content": "Budget pour SEO",
+        "description": "Quel est votre budget pour les services de SEO ?"
+    },
+    {
+        "id": "type_publicite_en_ligne",
+        "parent": "marketing_digital",
+        "content": "Type de Publicité en Ligne",
+        "description": "Quelle plateforme publicitaire préférez-vous ? (Google Ads, Facebook Ads, Instagram Ads, etc.)"
+    },
+    {
+        "id": "budget_publicite",
+        "parent": "type_publicite_en_ligne",
+        "content": "Budget pour Publicité en Ligne",
+        "description": "Quel est votre budget pour les campagnes publicitaires en ligne ?"
+    },
+    {
+        "id": "type_design_web",
+        "parent": "design_ux_ui",
+        "content": "Type de Design Web",
+        "description": "Pour vos applications web, nous offrons des designs personnalisés. Avez-vous des préférences pour le style ou les fonctionnalités ?"
+    },
+    {
+        "id": "budget_design_web",
+        "parent": "type_design_web",
+        "content": "Budget pour Design Web",
+        "description": "Quel budget souhaitez-vous allouer pour le design de votre application web ?"
+    },
+    {
+        "id": "type_design_mobile",
+        "parent": "design_ux_ui",
+        "content": "Type de Design Mobile",
+        "description": "Pour le design de vos applications mobiles, préférez-vous un style particulier ou une plateforme spécifique (iOS, Android, etc.) ?"
+    },
+    {
+        "id": "budget_design_mobile",
+        "parent": "type_design_mobile",
+        "content": "Budget pour Design Mobile",
+        "description": "Quel budget souhaitez-vous allouer pour le design de votre application mobile ?"
+    },
+    {
+        "id": "info_contact",
+        "parent": "end_road",
+        "content": "Informations de Contact",
+        "description": "Voici nos informations de contact : Email : contact@pixelraise.com, Téléphone : +33 1 23 45 67 89, Adresse : 123 Rue de l'Innovation, 74000 Annecy, France."
+    },
+    {
+        "id": "collaboration_projet",
+        "parent": "end_road",
+        "content": "Comment Nous Collaborons sur les Projets",
+        "description": "Nous croyons en une collaboration étroite avec nos clients. Nous débutons par une phase de découverte pour comprendre vos besoins, suivie par la création d'une stratégie, le développement, et des tests rigoureux avant la livraison. Voulez-vous en savoir plus sur notre processus ?"
+    },
+    {
+        "id": "details_collaboration",
+        "parent": "collaboration_projet",
+        "content": "Détails de la Collaboration",
+        "description": "Notre collaboration est basée sur la transparence et la communication continue. Vous aurez accès à des rapports réguliers, des réunions hebdomadaires, et une phase de révisions pour garantir que le projet correspond à vos attentes."
+    },
+    {
+        "id": "fourchette_devis",
+        "parent": "end_road",
+        "content": "Fourchette de Devis",
+        "description": "En fonction des réponses que vous avez fournies, nos devis pour ce type de projet varient généralement entre 5,000€ et 50,000€. Souhaitez-vous recevoir un devis personnalisé ?"
+    },
+    {
+        "id": "projet_site_vitrine",
+        "parent": "web_vitrine",
+        "content": "Technologies pour Site Vitrine",
+        "description": "Préférez-vous utiliser WordPress, un développement sur mesure ou avez-vous besoin d'hébergement et maintenance ?"
+    },
+    {
+        "id": "end_projet",
+        "parent": "projet_site_vitrine",
+        "content": "Merci d'avoir précisé vos besoins pour un site vitrine.",
+        "description": ""
+    },
+    {
+        "id": "end_ecommerce",
+        "parent": "ecommerce_plateforme",
+        "content": "Merci d'avoir précisé vos besoins pour un site e-commerce.",
+        "description": ""
+    },
+    {
+        "id": "end_seo",
+        "parent": "type_seo",
+        "content": "Merci d'avoir précisé vos besoins en SEO.",
+        "description": ""
+    },
+    {
+        "id": "end_publicite",
+        "parent": "type_publicite_en_ligne",
+        "content": "Merci d'avoir précisé vos besoins en publicité en ligne.",
+        "description": ""
+    },
+    {
+        "id": "end_design_web",
+        "parent": "type_design_web",
+        "content": "Merci d'avoir précisé vos besoins pour le design d'application web.",
+        "description": ""
+    },
+    {
+        "id": "end_design_mobile",
+        "parent": "type_design_mobile",
+        "content": "Merci d'avoir précisé vos besoins pour le design d'application mobile.",
+        "description": ""
+    },
+    {
+        "id": "end_road",
+        "parent": "end_road",
+        "content": "Merci, nous sommes à la fin de notre discussion. Laissez-nous vos impressions !",
+        "description": ""
+    }
+]

@@ -1,0 +1,51 @@
+.admin-dashboard .admin-button {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espacement entre les boutons */
+    justify-content: center; /* Centre les boutons */
+}
+
+.admin-button .question,
+.admin-button .col-md-4 {
+    background-color: #c1c1c1; /* Couleur par défaut */
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 250px; /* Limite la largeur de chaque bouton sur les écrans larges */
+    box-sizing: border-box;
+}
+
+.admin-button .question {
+    background-color: #f3618d;
+}
+
+.admin-button .col-md-4:nth-child(2) {
+    background-color: #9f6cbd; /* Couleur pour "Gérer les questions existantes" */
+}
+
+.admin-button .col-md-4:nth-child(3) {
+    background-color: #3079fb; /* Couleur pour "Voir les feedbacks" */
+}
+
+.texte {
+    font-weight: bold;
+    text-align: center;
+}
+
+.titre {
+    color: white;
+}
+@media (min-width: 768px) {
+    .admin-dashboard {
+        max-width: 800px; /* Réduit la largeur de la section sur les grands écrans */
+        margin: 0 auto; /* Centre la section au milieu*/
+    }
+}
+
+@media (max-width: 767px) {
+    .admin-button .question,
+    .admin-button .col-md-4 {
+        max-width: 100%; /* Les boutons occupent presque toute la largeur sur smartphone */
+    }
+}

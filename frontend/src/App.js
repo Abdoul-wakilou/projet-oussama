@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Chatbotconnecte from './components/Chatbotconnecte';
 import AdminDashboardconnecte from './components/AdminDashboardconnecte';
+import Chatbotia from './components/Chatbotia';
 
 
 import './App.css';
@@ -22,6 +23,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Chatbotconnecte />} />
             <Route path="/administration" element={<AdminDashboardconnecte />} />
+            <Route path="/chatbot-ia" element={<Chatbotia />} />
           </Routes>
         </main>
       </div>

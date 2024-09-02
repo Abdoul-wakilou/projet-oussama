@@ -1,0 +1,149 @@
+/* Style général du conteneur du chatbot */
+.chatbot-container {
+    width: 100%;
+    max-width: 600px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0px;
+}
+
+/* En-tête du chatbot */
+.chatbot-header {
+    background-color: #3079fb;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+/* Zone des messages */
+.chatbot-messages {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+/* Messages */
+.message {
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+/* Message de l'utilisateur */
+.message.user {
+    background-color: #3079fb;
+    color: #fff;
+    align-self: flex-end;
+}
+
+/* Message du bot */
+.message.bot {
+    background-color: #e0e0e0;
+    color: #000;
+    align-self: flex-start;
+    min-width: 70%;
+}
+
+/* Options cliquables */
+.options {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.option-button {
+    background-color: #f3618d; /* Couleur orange pour les options */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1em;
+}
+
+.option-button:hover {
+    background-color: #3079fb;
+}
+
+/* Animation de chargement */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #3044a4;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+}
+
+/* pour les feedbacks */
+
+.feedback-container {
+    margin-top: 15px;
+}
+
+.feedback-textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+.send-feedback-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.send-feedback-button:hover {
+    background-color: #0056b3;
+}
+/* fin pour les feedbacks */
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design pour mobile */
+@media (max-width: 600px) {
+    .chatbot-container {
+        max-width: 100%;
+        padding: 2px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .chatbot-header {
+        font-size: 1em;
+    }
+}

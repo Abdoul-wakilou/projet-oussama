@@ -121,7 +121,7 @@ const Chatbot = () => {
 
     return (
         <div className="chatbot-container">
-            <div className="chatbot-header">Salut 👋, je réponds à toutes vos questions 😊</div>
+            <div className="chatbot-header">Salut 👋, je suis chat gpt, je réponds à toutes vos questions 😊</div>
             <div className="chatbot-messages">
                 {messages.map((message, index) => (
                     <div key={index} className={`message ${message.sender}`}>

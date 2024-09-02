@@ -17,6 +17,7 @@ Ce projet est un chatbot interactif développé pour le site web de Pixelraise. 
 
 - Guide les utilisateurs en fonction de leurs besoins à travers un arbre décisionnel.
 - Conçu pour s'intégrer harmonieusement avec le design du site de Pixelraise.
+- Ajouter l'api de chat gpt pour continuer la discussion avec le client au cas où il n'est pas satisfait et veux poursuivre.
 
 ### Interface d'Administration
 

@@ -22,10 +22,10 @@ function App() {
         </header>
         <main>
           <Routes>
-            <Route path="/" element={<Chatbotconnecte />} />
+            {/* <Route path="/" element={<Chatbotconnecte />} /> */}
             <Route path="/administration" element={<AdminDashboardconnecte />} />
             <Route path="/chatbot-ia" element={<Chatbotia />} />
-            <Route path="/chatbot" element={<Chatbot />} />
+            <Route path="/" element={<Chatbot />} />
           </Routes>
         </main>
       </div>

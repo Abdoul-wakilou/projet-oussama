@@ -1,6 +1,6 @@
 # Pixelraise Chatbot
 
-## Description
+## Description bonjour papa
 
 Ce projet est un chatbot interactif développé pour le site web de Pixelraise. Le chatbot guide les utilisateurs à travers un arbre décisionnel en fonction de leurs besoins (Développement Web, Marketing Digital, UX/UI Design, etc.). Le projet comprend également une interface d'administration pour gérer les questions, réponses, services, et feedbacks des utilisateurs. Et une version ia pour discuter avec l'intelligence artificielle "Chat gpt de open ai" au cas où le visiteur n'est pas satisfait des questions
 

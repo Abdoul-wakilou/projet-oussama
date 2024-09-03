@@ -3,6 +3,7 @@ const http = require('http');
 const app = require('./app');
 const fs = require("fs");
 
+
 const normalizePort = val => {
     const port = parseInt(val, 10);
     if (isNaN(port)) {

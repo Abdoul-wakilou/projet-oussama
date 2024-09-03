@@ -125,6 +125,50 @@
 }
 /* fin pour les feedbacks */
 
+
+/* Styles pour le conteneur du mode IA */
+.ia-mode-container {
+    margin-top: 15px;
+    text-align: center; /* Centre le texte et les boutons */
+}
+
+.ia-mode-container p {
+    margin-bottom: 10px; /* Ajoute un espace sous le message */
+}
+
+/* Styles pour les boutons du mode IA */
+.ia-mode-button {
+    padding: 8px 16px; /* Boutons légèrement plus petits */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em; /* Réduit légèrement la taille de la police */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin: 5px; /* Ajoute un petit espace autour des boutons */
+}
+
+.ia-mode-button:first-child {
+    background-color: #28a745; /* Couleur verte pour "Oui" */
+    color: white;
+}
+
+.ia-mode-button:last-child {
+    background-color: #dc3545; /* Couleur rouge pour "Non" */
+    color: white;
+}
+
+.ia-mode-button:first-child:hover {
+    background-color: #218838; /* Vert plus foncé au survol */
+}
+
+.ia-mode-button:last-child:hover {
+    background-color: #c82333; /* Rouge plus foncé au survol */
+}
+
+
+
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);

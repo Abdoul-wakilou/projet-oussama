@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Chatbotconnecte from './components/Chatbotconnecte';
 import AdminDashboardconnecte from './components/AdminDashboardconnecte';
 import Chatbotia from './components/Chatbotia';
+import Chatbot from './components/Chatbot';
 
 
 import './App.css';
@@ -24,6 +25,7 @@ function App() {
             <Route path="/" element={<Chatbotconnecte />} />
             <Route path="/administration" element={<AdminDashboardconnecte />} />
             <Route path="/chatbot-ia" element={<Chatbotia />} />
+            <Route path="/chatbot" element={<Chatbot />} />
           </Routes>
         </main>
       </div>

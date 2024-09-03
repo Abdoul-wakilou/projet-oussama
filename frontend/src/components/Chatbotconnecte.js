@@ -1,7 +1,7 @@
 //le chatbot
 
 import React, { useState, useEffect, useRef } from 'react';
-import './Chatbot.css';
+import './Chatbotconnecte.css';
 import { getAllQuestions, createFeedback } from '../services/chatbotService';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';

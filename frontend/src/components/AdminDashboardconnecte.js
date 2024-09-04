@@ -92,20 +92,20 @@ const AdminDashboard = () => {
 
     const handleSaveEdit = async () => {
         if (window.confirm('Confirmez la modification de la question')) {
+            // Vérifier si parentQuestionId est vide, si oui, le remettre à null
             const updatedQuestionObject = {
                 content: newQuestion,
                 description,
-                id: questionId,
-                parent: parentQuestionId
+                parent: parentQuestionId || null  // Si parentQuestionId est une chaîne vide, utiliser null
             };
+            
             try {
                 const updatedQuestion = await updateQuestion(editingQuestion._id, updatedQuestionObject);
                 setQuestions(questions.map(q => (q._id === updatedQuestion._id ? updatedQuestion : q)));
                 setEditingQuestion(null);
                 setNewQuestion('');
                 setDescription('');
-                setQuestionId('');
-                setParentQuestionId('');
+                setParentQuestionId(''); // Réinitialiser le champ parent après mise à jour
                 setAlertMessage('La question a été mise à jour');
             } catch (error) {
                 console.error('Erreur lors de la mise à jour de la question:', error);
@@ -166,69 +166,83 @@ const AdminDashboard = () => {
                         {alertMessage && <div className="alert alert-info mt-3">{alertMessage}</div>}
                     </div>
                 );
-            case 'gestion':
-                return (
-                    <table className="table table-responsive mt-3">
-                        <thead>
-                            <tr>
-                                <th>Question</th>
-                                <th>Description</th>
-                                <th>Parent</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {questions.map((question) => (
-                                <React.Fragment key={question._id}>
-                                    {editingQuestion && editingQuestion._id === question._id ? (
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    type="text"
-                                                    value={newQuestion}
-                                                    onChange={(e) => setNewQuestion(e.target.value)}
-                                                    className="form-control"
-                                                />
-                                            </td>
-                                            <td>
-                                                <textarea
-                                                    value={description}
-                                                    onChange={(e) => setDescription(e.target.value)}
-                                                    className="form-control"
-                                                />
-                                            </td>
-                                            <td>
-                                                <select
-                                                    value={parentQuestionId}
-                                                    onChange={(e) => setParentQuestionId(e.target.value)}
-                                                    className="form-control"
-                                                >
-                                                    <option value="">Sélectionner le parent</option>
-                                                    {questions.map(q => (
-                                                        <option key={q.id} value={q.id}>{q.id}</option>
-                                                    ))}
-                                                </select>
-                                            </td>
-                                            <td>
-                                                <FontAwesomeIcon icon={faPaperPlane} className="save-icon mx-2" onClick={handleSaveEdit} />
-                                            </td>
-                                        </tr>
-                                    ) : (
-                                        <tr>
-                                            <td>{question.content}</td>
-                                            <td>{question.description}</td>
-                                            <td>{question.parent || '-'}</td>
-                                            <td>
-                                                <FontAwesomeIcon icon={faEdit} className="edit-icon mx-2" onClick={() => handleEditQuestion(question)} />
-                                                <FontAwesomeIcon icon={faTrash} className="delete-icon mx-2" onClick={() => handleDeleteQuestion(question._id)} />
-                                            </td>
-                                        </tr>
-                                    )}
-                                </React.Fragment>
-                            ))}
-                        </tbody>
-                    </table>
-                );
+                case 'gestion':
+                    return (
+                        <div className="table-responsive mt-3">
+                            <table className="table">
+                                <thead>
+                                    <tr>
+                                        <th className="col-4 col-md-5">Question</th>
+                                        <th className="col-4 col-md-4">Description</th>
+                                        <th className="col-2 col-md-1">Id de la question</th>
+                                        <th className="col-2 col-md-1">Parent</th>
+                                        <th className="col-2 col-md-1">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {questions.map((question) => (
+                                        <React.Fragment key={question._id}>
+                                            {editingQuestion && editingQuestion._id === question._id ? (
+                                                <tr>
+                                                    <td className="col-4 col-md-5">
+                                                        <input
+                                                            type="text"
+                                                            value={newQuestion}
+                                                            onChange={(e) => setNewQuestion(e.target.value)}
+                                                            className="form-control"
+                                                        />
+                                                    </td>
+                                                    <td className="col-4 col-md-4">
+                                                        <textarea
+                                                            value={description}
+                                                            onChange={(e) => setDescription(e.target.value)}
+                                                            className="form-control"
+                                                        />
+                                                    </td>
+                                                    <td className="col-2 col-md-1">
+                                                        <input
+                                                            type="text"
+                                                            value={questionId}
+                                                            className="form-control"
+                                                            disabled
+                                                        />
+                                                    </td>
+                                                    <td className="col-2 col-md-1">
+                                                        <select
+                                                            value={parentQuestionId}
+                                                            onChange={(e) => setParentQuestionId(e.target.value)}
+                                                            className="form-control"
+                                                        >
+                                                            <option value="">Sélectionner le parent</option>
+                                                            {questions.map(q => (
+                                                                <option key={q.id} value={q.id}>{q.id}</option>
+                                                            ))}
+                                                        </select>
+                                                    </td>
+                                                    <td className="col-2 col-md-1">
+                                                        <FontAwesomeIcon icon={faPaperPlane} className="save-icon mx-2" onClick={handleSaveEdit} />
+                                                    </td>
+                                                </tr>
+                                            ) : (
+                                                <tr>
+                                                    <td className="col-4 col-md-5">{question.content}</td>
+                                                    <td className="col-4 col-md-4">{question.description}</td>
+                                                    <td className="col-2 col-md-1">{question.id}</td>
+                                                    <td className="col-2 col-md-1">{question.parent || '-'}</td>
+                                                    <td className="col-2 col-md-1">
+                                                        <FontAwesomeIcon icon={faEdit} className="edit-icon mx-2" onClick={() => handleEditQuestion(question)} />
+                                                        <FontAwesomeIcon icon={faTrash} className="delete-icon mx-2" onClick={() => handleDeleteQuestion(question._id)} />
+                                                    </td>
+                                                </tr>
+                                            )}
+                                        </React.Fragment>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    );
+                
+
             case 'feedbacks':
                 return (
                     <table className="table table-striped mt-3">

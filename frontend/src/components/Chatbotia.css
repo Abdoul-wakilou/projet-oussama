@@ -1,4 +1,12 @@
 /* Style général du conteneur du chatbot */
+
+.typing-indicator {
+    font-style: italic;
+    color: #888;
+    margin-top: 5px;
+}
+
+
 .chatbot-container {
     width: 100%;
     max-width: 600px;

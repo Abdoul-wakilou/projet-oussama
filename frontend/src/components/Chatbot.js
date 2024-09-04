@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Chatbot = () => {
     const [messages, setMessages] = useState([
-        { text: 'Salut 👋, je suis un chatbot. Quel service recherchez-vous ?', sender: 'bot', options: [] }
+        { text: 'Salut 👋, je suis un chatbot. Quel service recherchez-vous ?', sender: 'bot', options: [], description: '' }
     ]);
     const [loading, setLoading] = useState(false);
     const [questions, setQuestions] = useState([]);
@@ -15,7 +15,7 @@ const Chatbot = () => {
     const [feedbackContent, setFeedbackContent] = useState('');
     const [iaModeQuestion, setIaModeQuestion] = useState(false);
     const messagesEndRef = useRef(null);
-    const navigate = useNavigate(); // Utilisation de useNavigate pour la redirection
+    const navigate = useNavigate();
 
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -52,7 +52,7 @@ const Chatbot = () => {
     const handleOptionClick = (optionText) => {
         setMessages(prevMessages => [
             ...prevMessages,
-            { text: optionText, sender: 'user' }
+            { text: optionText, sender: 'user', description: '' }
         ]);
 
         setLoading(true);
@@ -70,6 +70,7 @@ const Chatbot = () => {
                         {
                             text: selectedQuestion.content,
                             sender: 'bot',
+                            description: selectedQuestion.description, // Ajout de la description
                             options: childQuestions.map(q => q.content)
                         }
                     ]);
@@ -77,13 +78,13 @@ const Chatbot = () => {
                     setFeedbackMode(true);
                     setMessages(prevMessages => [
                         ...prevMessages,
-                        { text: "Nous sommes à la fin, j'espère vous avoir répondu. Sinon, laissez un avis ou votre question.", sender: 'bot', options: [] }
+                        { text: "Nous sommes à la fin, j'espère vous avoir répondu. Sinon, laissez un avis ou votre question.", sender: 'bot', description: '', options: [] }
                     ]);
                 }
             } else {
                 setMessages(prevMessages => [
                     ...prevMessages,
-                    { text: 'Je n\'ai pas compris votre demande, pouvez-vous préciser ?', sender: 'bot', options: [] }
+                    { text: 'Je n\'ai pas compris votre demande, pouvez-vous préciser ?', sender: 'bot', description: '', options: [] }
                 ]);
             }
         }, 1000);
@@ -104,7 +105,7 @@ const Chatbot = () => {
             await createFeedback(feedbackObject);
             setMessages(prevMessages => [
                 ...prevMessages,
-                { text: "Merci pour votre feedback!", sender: 'bot', options: [] }
+                { text: "Merci pour votre feedback!", sender: 'bot', description: '', options: [] }
             ]);
             setFeedbackContent('');
             setFeedbackMode(false);
@@ -120,7 +121,7 @@ const Chatbot = () => {
         } else {
             setMessages(prevMessages => [
                 ...prevMessages,
-                { text: "Merci de nous avoir contactés. N'hésitez pas à revenir si vous avez d'autres questions.", sender: 'bot', options: [] }
+                { text: "Merci de nous avoir contactés. N'hésitez pas à revenir si vous avez d'autres questions.", sender: 'bot', description: '', options: [] }
             ]);
         }
         setIaModeQuestion(false);
@@ -133,6 +134,11 @@ const Chatbot = () => {
                 {messages.map((message, index) => (
                     <div key={index} className={`message ${message.sender}`}>
                         {message.text}
+                        {message.description && (
+                            <div className="message-description">
+                                {message.description}
+                            </div>
+                        )}
                         {message.options && (
                             <div className="options">
                                 {message.options.map((option, i) => (
